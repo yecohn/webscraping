@@ -17,6 +17,7 @@ def parse_response(response):
 def main():
     response = get_data_from_URL(URL)
     data = parse_response(response)
+    print(data)
 
 
 if __name__ == '__main__':
