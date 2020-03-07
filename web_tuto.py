@@ -11,7 +11,7 @@ def get_data_from_URL(url):
 
 
 def parse_response(response):
-    return BeautifulSoup(response.text, 'response.html')
+    return BeautifulSoup(response.text, 'data.html')
 
 
 def main():
