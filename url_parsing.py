@@ -1,77 +1,54 @@
 from bs4 import BeautifulSoup
 import requests
-import urllib.request
-import time
 import pandas as pd
-import csv
 
 
-class HtmlContent:
+class HTMLLoader:
 
     def __init__(self, url):
         self.url = url
 
-    def g_url(self):
-        return requests.get(self.url)
+    def get_data_from_url(self):
+        return requests.get(self.url).text
 
     def parse_response(self):
-        return BeautifulSoup(self.g_url().text, 'html.parser')
+        return BeautifulSoup(self.get_data_from_url(), 'html.parser')
 
-    def html_print(self):
-
-        data = self.parse_response()
-        print(data)
+    def print_HTML(self):
+        print(self.parse_response())
 
 
-class get_info(HtmlContent):
-    def name_marker(self):
-         a = []
-         tag = self.parse_response().find_all('th')
-         for word in tag:
-             a.append(word.get_text())
+class Adapter:
 
-         return a
+    def __init__(self, html_loader):
+        self.html_data = html_loader.parse_response()
 
-    def country_data_html(self):
-        info = []
-        for article in self.parse_response().find_all('tr', style='width: 100%'):
-            headline = article.text
-            info.append(headline)
-        info_2 = [a.split('\n') for a in info]
+    def get_countries_titles(self):
+        tags = self.html_data.find_all('th')
+        return [tag.get_text() for tag in tags]
 
-        for a in info_2:
-            a[:] = (i for i in a if i != '')
-        return info_2
+    def get_countries(self):
+        countries_result = []
+        countries_html = self.html_data.find_all('tr', style="width: 100%")
+        [countries_result.append(country.text) for country in countries_html]
+        countries = [item.split('\n') for item in countries_result]
+        for country in countries:
+            country[:] = (attribute for attribute in country if attribute != '')
+        return countries
 
-    def scrapping_file(self):
-        return [self.name_marker()[1:]] + self.country_data_html()
+    def get_countries_with_headline(self):
+        return [self.get_countries_titles()[1:]] + self.get_countries()
 
-
-
-       # tags = tags.text
-       # tag2 = tags.find_all()
-        #for tag in tags:
-        #    info = []
-        #    tmp = tag.split('\n')
-        #    tmp[:] = (val for val in info if val != '')
-        #    info.append(tmp)
-        return info
+    def print_countries_with_headline_to_csv(self):
+        dataframe = pd.DataFrame(self.get_countries_with_headline()[1:], columns=self.get_countries_with_headline()[0])
+        dataframe.to_csv('cost_of_living_2020.csv', index=False)
 
 
-
-    def country_data(self):
-        pass
 def main():
-
-    URL = 'https://www.numbeo.com/cost-of-living/rankings_by_country.jsp'
-    cost = get_info(URL)
-    #print(cost.name_marker())
-    print(cost.scrapping_file())
-    frame = pd.DataFrame(cost.scrapping_file()[1:], columns = cost.scrapping_file()[0])
-    print(frame.head(10)[0:3])
-    frame.to_csv('cost_of_living_2020.csv', index=False)
-
-
+    URL = 'https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019'
+    html_loader = HTMLLoader(URL)
+    adapter = Adapter(html_loader)
+    adapter.print_countries_with_headline_to_csv()
 
 
 if __name__ == '__main__':
