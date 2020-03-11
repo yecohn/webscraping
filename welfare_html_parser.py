@@ -5,8 +5,10 @@ import pandas as pd
 
 class HTMLLoader:
 
-    def __init__(self, url):
+    def __init__(self, url, subject, year):
         self.url = url
+        self.subject = subject
+        self.year = year
 
     def get_data_from_url(self):
         return requests.get(self.url).text
@@ -18,18 +20,18 @@ class HTMLLoader:
         print(self.parse_response())
 
 
-class Adapter:
+class HTMLAdapter:
 
     def __init__(self, html_loader):
-        self.html_data = html_loader.parse_response()
+        self.html_loader = html_loader
 
     def get_countries_titles(self):
-        tags = self.html_data.find_all('th')
+        tags = self.html_loader.parse_response().find_all('th')
         return [tag.get_text() for tag in tags]
 
     def get_countries(self):
         countries_result = []
-        countries_html = self.html_data.find_all('tr', style="width: 100%")
+        countries_html = self.html_loader.parse_response().find_all('tr', style="width: 100%")
         [countries_result.append(country.text) for country in countries_html]
         countries = [item.split('\n') for item in countries_result]
         for country in countries:
@@ -41,15 +43,4 @@ class Adapter:
 
     def log_countries_with_headline_to_csv(self):
         dataframe = pd.DataFrame(self.get_countries_with_headline()[1:], columns=self.get_countries_with_headline()[0])
-        dataframe.to_csv('cost_of_living_2020.csv', index=False)
-
-
-def main():
-    URL = 'https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019'
-    html_loader = HTMLLoader(URL)
-    adapter = Adapter(html_loader)
-    adapter.log_countries_with_headline_to_csv()
-
-
-if __name__ == '__main__':
-    main()
+        dataframe.to_csv(f'{self.html_loader.subject}_{self.html_loader.year}.csv', index=False)
