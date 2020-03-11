@@ -16,14 +16,10 @@ MAIN_URL = f'https://www.numbeo.com/{SUBJECT}/rankings_by_country.jsp?title={YEA
 class Welfare(enum.Enum):
     cost_of_living = 'cost-of-living'
     crime = 'crime'
-    climate = 'climate'
-    food_prices = 'food-prices'
-    gas_prices = 'gas-prices'
     health_care = 'health-care'
     pollution = 'pollution'
     property_investment = 'property-investment'
     quality_of_life = 'quality-of-life'
-    taxi_fare = 'taxi-fare'
     traffic = 'traffic'
 
 
