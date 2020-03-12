@@ -4,7 +4,6 @@ import re
 from enum import Enum
 from welfare_html_parser import HTMLLoader
 from welfare_html_parser import HTMLAdapter
-import enum
 import datetime
 
 SUBJECT = '<SUBJECT>'
