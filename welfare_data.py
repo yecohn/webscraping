@@ -12,7 +12,7 @@ FIRST_YEAR = 2010
 MAIN_URL = f'https://www.numbeo.com/{SUBJECT}/rankings_by_country.jsp?title={YEAR}'
 
 
-class Welfare(enum.Enum):
+class Welfare(Enum):
     cost_of_living = 'cost-of-living'
     crime = 'crime'
     health_care = 'health-care'
