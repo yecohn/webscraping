@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import argparse
+HTTP_SUCCESS = 200
 
 
 class HTMLLoader:
@@ -11,10 +13,19 @@ class HTMLLoader:
         self.year = year
 
     def get_data_from_url(self):
-        return requests.get(self.url).text
+        response = requests.get(self.url)
+        if response.status_code == HTTP_SUCCESS and type(response.text) == str:
+            return response.text
+        print('Failed to download data from server!')
+        exit()
 
     def parse_response(self):
-        return BeautifulSoup(self.get_data_from_url(), 'html.parser')
+        try:
+            soup = BeautifulSoup(self.get_data_from_url(), 'html.parser')
+        except:
+            print("Failed to parse the data!")
+            exit()
+        return soup
 
     def print_HTML(self):
         print(self.parse_response())
@@ -44,3 +55,11 @@ class HTMLAdapter:
     def log_countries_with_headline_to_csv(self):
         dataframe = pd.DataFrame(self.get_countries_with_headline()[1:], columns=self.get_countries_with_headline()[0])
         dataframe.to_csv(f'{self.html_loader.subject}_{self.html_loader.year}.csv', index=False)
+
+
+
+
+
+
+
+

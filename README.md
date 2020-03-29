@@ -2,9 +2,11 @@
 PublicWelfare is a project that measures the indexes (characteristics) that affect people's welfare.
 
 ## Installation Requirements
-Run the following via command line in order to install the packages you need to run the project using the package manager [pip](https://pip.pypa.io/en/stable/)
-```
-pip install -r requirements.txt
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+```bash
+pip install beautifulsoup4
+pip install requests
+pip install pandas
 ```
 
 ## Authors
