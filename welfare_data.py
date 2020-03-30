@@ -30,6 +30,7 @@ def log_ranking(subject, year):
     adapter = HTMLAdapter(html_loader)
     return adapter.get_countries_with_headline()
 
+
 def log_ranking_to_csv(subject, year):
     URL = MAIN_URL.replace(SUBJECT, subject).replace(YEAR, year)
     html_loader = HTMLLoader(URL, subject, year)
@@ -47,6 +48,8 @@ def log_all_rankings_to_csvs():
     for welfare in Welfare:
         for year in range(FIRST_YEAR, current_year + 1):  # We don't want this current year in the csv because it's not full
             log_ranking_to_csv(welfare.value, str(year))
+
+
 
 
 def main():
@@ -110,3 +113,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
