@@ -5,16 +5,11 @@ import logging
 import settings
 import sys
 
-SUBJECT = '<SUBJECT>'
-YEAR = '<YEAR>'
-MAIN_URL = f'https://www.numbeo.com/{SUBJECT}/rankings_by_country.jsp?title={YEAR}'
-HTTP_SUCCESS = 200
-
 
 class HTMLLoader:
 
     def __init__(self, subject, year):
-        self.url = MAIN_URL.replace(SUBJECT, subject).replace(YEAR, year)
+        self.url = settings.MAIN_URL.replace(settings.SUBJECT, subject).replace(settings.YEAR, year)
         self.subject = subject
         self.year = year
         self.logger = logging.getLogger(settings.LOGGER_NAME)
@@ -32,11 +27,11 @@ class HTMLLoader:
             response = requests.get(self.url)
         except (TypeError, ConnectionError, Exception) as e:
             self.logger.critical(e, exc_info=True)
-            exit()
+            sys.exit()
         self.logger.info(f'Finished fetching data from {self.url}')
-        if response.status_code != HTTP_SUCCESS:
+        if response.status_code != settings.HTTP_SUCCESS:
             self.logger.critical(e, exc_info=True)
-            exit()
+            sys.exit()
         return response.text
 
     def parse_response(self):
@@ -47,7 +42,7 @@ class HTMLLoader:
             return self.response_soup
         except (TypeError, Exception) as e:
             self.logger.critical(e, exc_info=True)
-            exit()
+            sys.exit()
 
 
 class HTMLAdapter:
