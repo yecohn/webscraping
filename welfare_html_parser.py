@@ -32,13 +32,10 @@ class HTMLLoader:
             response = requests.get(self.url)
         except (TypeError, ConnectionError, Exception) as e:
             self.logger.critical(e, exc_info=True)
-            print(e)
             exit()
         self.logger.info(f'Finished fetching data from {self.url}')
         if response.status_code != HTTP_SUCCESS:
-            error_msg = f'Failed to fetch data from {self.url}'
             self.logger.critical(e, exc_info=True)
-            print(error_msg)
             exit()
         return response.text
 
@@ -50,7 +47,6 @@ class HTMLLoader:
             return self.response_soup
         except (TypeError, Exception) as e:
             self.logger.critical(e, exc_info=True)
-            print(e)
             exit()
 
 
