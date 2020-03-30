@@ -1,24 +1,26 @@
 
+
 import os
 import welfare_data
 import datetime
 import mysql.connector
 from _collections import defaultdict
 DATABASE_NAME= 'parser'
+HOST = '<ENTER localhost>'
+USERNAME = '<ENTER root (or your username)>'
+PASSWD= '<ENTER your mysql password>'
 
-if os.path.exists(DATABASE_NAME):
-    os.remove(DATABASE_NAME)
 try:
-    mydb = mysql.connector.connect(host = "localhost",
-                               user = "root",
-                               passwd = "azerty051210",
-                               database = "parser")
+    mydb = mysql.connector.connect(host=HOST,
+                               user =USERNAME,
+                               passwd =PASSWD,
+                               database =DATABASE_NAME)
 
     cur = mydb.cursor()
 except:
-    mydb = mysql.connector.connect(host="localhost",
-                                   user="root",
-                                   passwd="azerty051210",
+    mydb = mysql.connector.connect(host=HOST,
+                                   user=USERNAME,
+                                   passwd=PASSWD,
                                    )
 
     cur = mydb.cursor()

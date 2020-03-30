@@ -50,11 +50,21 @@ def log_all_rankings_to_csvs():
             log_ranking_to_csv(welfare.value, str(year))
 
 
+""" Comment for yaniv: here the command line interface. I added it into the main. We should discuss how we want to display it 
+but for now. the main is designed to be run from the command line. it the user is doing python welfare_data.py --help the help 
+doc will appear. there he will learn how to use the different options.
+
+
+in order to build the database on your computer you should go to db_building.py and change your connection setting: in the mydb = ...
+for the sake of the exercise I did not hide my information. We should howerver
+
+
+"""
 
 
 def main():
 
-    parser = argparse.ArgumentParser(description= 'Welcolme to command line options help. 2 options are available:\
+    parser = argparse.ArgumentParser(description= 'Welcome to command line options help. 2 options are available:\
                                                     --table <subject> <year> will return the table wanted. \
                                                     Adding --to_csv will copy the information inquired to a file named <subject><year>.csv\
                                                     into the current directory. \
