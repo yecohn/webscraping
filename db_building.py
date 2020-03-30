@@ -284,6 +284,8 @@ for year in YEARS:
 
 mydb.commit()
 
+mydb.close()
+
 
 
 
