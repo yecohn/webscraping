@@ -1,7 +1,11 @@
 
 
 import os
+<<<<<<< HEAD
 import welfare_data
+=======
+import welfare_manager
+>>>>>>> 38992ae2c09ba57a5c65fd0665d68be7da1b93a5
 import datetime
 import mysql.connector
 from _collections import defaultdict
@@ -84,7 +88,11 @@ SUBJECT_NAME = 'property-investment'
 CURRENT_YEAR = int(datetime.datetime.now().year)
 YEARS = [str(year) for year in range(2010, CURRENT_YEAR + 1)]
 for year in YEARS:
+<<<<<<< HEAD
     for row in welfare_data.log_ranking(SUBJECT_NAME, year)[1:]:
+=======
+    for row in welfare_manager.log_ranking(SUBJECT_NAME, year)[1:]:
+>>>>>>> 38992ae2c09ba57a5c65fd0665d68be7da1b93a5
         if row[0] in dic_country:
             print('the country: {} for year: {} is being added to table {}'.format(row[0], year,   SUBJECT_NAME))
             fields = [dic_country[row[0]], year, *row[1:]]
@@ -116,7 +124,11 @@ SUBJECT_NAME = 'cost-of-living'
 CURRENT_YEAR = int(datetime.datetime.now().year)
 YEARS = [str(year) for year in range(2010, CURRENT_YEAR + 1)]
 for year in YEARS:
+<<<<<<< HEAD
     for row in welfare_data.log_ranking(SUBJECT_NAME, year)[1:]:
+=======
+    for row in welfare_manager.log_ranking(SUBJECT_NAME, year)[1:]:
+>>>>>>> 38992ae2c09ba57a5c65fd0665d68be7da1b93a5
         if row[0] in dic_country:
             print('the country: {} for year: {} is being added to table {}'.format(row[0], year,   SUBJECT_NAME))
             fields = [dic_country[row[0]], year, *row[1:]]
@@ -146,7 +158,11 @@ SUBJECT_NAME = 'traffic'
 CURRENT_YEAR = int(datetime.datetime.now().year)
 YEARS = [str(year) for year in range(2010, CURRENT_YEAR + 1)]
 for year in YEARS:
+<<<<<<< HEAD
     for row in welfare_data.log_ranking(SUBJECT_NAME, year)[1:]:
+=======
+    for row in welfare_manager.log_ranking(SUBJECT_NAME, year)[1:]:
+>>>>>>> 38992ae2c09ba57a5c65fd0665d68be7da1b93a5
         if row[0] in dic_country:
             print('the country: {} for year: {} is being added to table {}'.format(row[0], year,   SUBJECT_NAME))
             fields = [dic_country[row[0]], year, *row[1:]]
@@ -174,7 +190,11 @@ SUBJECT_NAME = 'health-care'
 CURRENT_YEAR = int(datetime.datetime.now().year)
 YEARS = [str(year) for year in range(2010, CURRENT_YEAR + 1)]
 for year in YEARS:
+<<<<<<< HEAD
     for row in welfare_data.log_ranking(SUBJECT_NAME, year)[1:]:
+=======
+    for row in welfare_manager.log_ranking(SUBJECT_NAME, year)[1:]:
+>>>>>>> 38992ae2c09ba57a5c65fd0665d68be7da1b93a5
         if row[0] in dic_country:
             print('the country: {} for year: {} is being added to table {}'.format(row[0], year,   SUBJECT_NAME))
             fields = [dic_country[row[0]], year, *row[1:]]
@@ -202,7 +222,11 @@ SUBJECT_NAME = 'pollution'
 CURRENT_YEAR = int(datetime.datetime.now().year)
 YEARS = [str(year) for year in range(2010, CURRENT_YEAR + 1)]
 for year in YEARS:
+<<<<<<< HEAD
     for row in welfare_data.log_ranking(SUBJECT_NAME, year)[1:]:
+=======
+    for row in welfare_manager.log_ranking(SUBJECT_NAME, year)[1:]:
+>>>>>>> 38992ae2c09ba57a5c65fd0665d68be7da1b93a5
         if row[0] in dic_country:
             print('the country: {} for year: {} is being added to table {}'.format(row[0], year,   SUBJECT_NAME))
             fields = [dic_country[row[0]], year, *row[1:]]
@@ -237,7 +261,11 @@ SUBJECT_NAME = 'quality-of-life'
 CURRENT_YEAR = int(datetime.datetime.now().year)
 YEARS = [str(year) for year in range(2010, CURRENT_YEAR + 1)]
 for year in YEARS:
+<<<<<<< HEAD
     for row in welfare_data.log_ranking(SUBJECT_NAME, year)[1:]:
+=======
+    for row in welfare_manager.log_ranking(SUBJECT_NAME, year)[1:]:
+>>>>>>> 38992ae2c09ba57a5c65fd0665d68be7da1b93a5
         if row[0] in dic_country:
             print('the country: {} for year: {} is being added to table {}'.format(row[0], year,   SUBJECT_NAME))
             fields = [dic_country[row[0]], year, *row[1:]]
@@ -269,7 +297,11 @@ CURRENT_YEAR = int(datetime.datetime.now().year)
 YEARS = [str(year) for year in range(2010, CURRENT_YEAR + 1)]
 
 for year in YEARS:
+<<<<<<< HEAD
     for row in welfare_data.log_ranking(SUBJECT_NAME, year)[1:]:
+=======
+    for row in welfare_manager.log_ranking(SUBJECT_NAME, year)[1:]:
+>>>>>>> 38992ae2c09ba57a5c65fd0665d68be7da1b93a5
         if row[0] in dic_country:
             print('the country: {} for year: {} is being added to table {}'.format(row[0], year, SUBJECT_NAME))
             fields = [dic_country[row[0]], year, *row[1:]]
