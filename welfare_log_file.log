@@ -1,0 +1,491 @@
+2020-03-31 14:17:39,056 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:41,084 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:41,085 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:41,158 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:41,158 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2019 to cost-of-living_2019.csv
+2020-03-31 14:17:41,205 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2019 to cost-of-living_2019.csv
+2020-03-31 14:17:41,205 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:42,722 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:42,723 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:42,779 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:42,779 : INFO : welfare_logger : Started writing countries in field crime of year 2019 to crime_2019.csv
+2020-03-31 14:17:42,793 : INFO : welfare_logger : Finished writing countries in field crime of year 2019 to crime_2019.csv
+2020-03-31 14:17:42,793 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:44,156 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:44,156 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:44,190 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:44,191 : INFO : welfare_logger : Started writing countries in field health-care of year 2019 to health-care_2019.csv
+2020-03-31 14:17:44,201 : INFO : welfare_logger : Finished writing countries in field health-care of year 2019 to health-care_2019.csv
+2020-03-31 14:17:44,201 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:45,633 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:45,634 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:45,671 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:45,671 : INFO : welfare_logger : Started writing countries in field pollution of year 2019 to pollution_2019.csv
+2020-03-31 14:17:45,682 : INFO : welfare_logger : Finished writing countries in field pollution of year 2019 to pollution_2019.csv
+2020-03-31 14:17:45,682 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:47,228 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:47,228 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:47,291 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:47,291 : INFO : welfare_logger : Started writing countries in field property-investment of year 2019 to property-investment_2019.csv
+2020-03-31 14:17:47,308 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2019 to property-investment_2019.csv
+2020-03-31 14:17:47,308 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:48,661 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:48,662 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:48,722 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:48,722 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2019 to quality-of-life_2019.csv
+2020-03-31 14:17:48,739 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2019 to quality-of-life_2019.csv
+2020-03-31 14:17:48,739 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:50,095 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:50,096 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:50,149 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2019
+2020-03-31 14:17:50,149 : INFO : welfare_logger : Started writing countries in field traffic of year 2019 to traffic_2019.csv
+2020-03-31 14:17:50,184 : INFO : welfare_logger : Finished writing countries in field traffic of year 2019 to traffic_2019.csv
+2020-03-31 14:30:17,925 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:19,436 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:19,437 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:19,472 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:19,472 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2010 to cost-of-living_2010.csv
+2020-03-31 14:30:19,485 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2010 to cost-of-living_2010.csv
+2020-03-31 14:30:19,485 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:21,077 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:21,077 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:21,134 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:21,135 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2011 to cost-of-living_2011.csv
+2020-03-31 14:30:21,151 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2011 to cost-of-living_2011.csv
+2020-03-31 14:30:21,151 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:22,511 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:22,512 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:22,581 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:22,581 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2012 to cost-of-living_2012.csv
+2020-03-31 14:30:22,599 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2012 to cost-of-living_2012.csv
+2020-03-31 14:30:22,600 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:24,030 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:24,031 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:24,087 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:24,087 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2013 to cost-of-living_2013.csv
+2020-03-31 14:30:24,103 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2013 to cost-of-living_2013.csv
+2020-03-31 14:30:24,103 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:25,587 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:25,587 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:25,641 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:25,641 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2014 to cost-of-living_2014.csv
+2020-03-31 14:30:25,660 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2014 to cost-of-living_2014.csv
+2020-03-31 14:30:25,660 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:27,225 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:27,226 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:27,280 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:27,281 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2015 to cost-of-living_2015.csv
+2020-03-31 14:30:27,300 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2015 to cost-of-living_2015.csv
+2020-03-31 14:30:27,300 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2016
+2020-03-31 14:30:28,659 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2016
+2020-03-31 14:30:28,660 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2016
+2020-03-31 14:30:28,737 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2016
+2020-03-31 14:30:28,737 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2016 to cost-of-living_2016.csv
+2020-03-31 14:30:28,757 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2016 to cost-of-living_2016.csv
+2020-03-31 14:30:28,757 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2017
+2020-03-31 14:30:30,299 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2017
+2020-03-31 14:30:30,300 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2017
+2020-03-31 14:30:30,372 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2017
+2020-03-31 14:30:30,372 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2017 to cost-of-living_2017.csv
+2020-03-31 14:30:30,391 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2017 to cost-of-living_2017.csv
+2020-03-31 14:30:30,391 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2018
+2020-03-31 14:30:31,942 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2018
+2020-03-31 14:30:31,943 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2018
+2020-03-31 14:30:31,996 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2018
+2020-03-31 14:30:31,996 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2018 to cost-of-living_2018.csv
+2020-03-31 14:30:32,015 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2018 to cost-of-living_2018.csv
+2020-03-31 14:30:32,015 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2019
+2020-03-31 14:30:33,516 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2019
+2020-03-31 14:30:33,517 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2019
+2020-03-31 14:30:33,575 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?title=2019
+2020-03-31 14:30:33,576 : INFO : welfare_logger : Started writing countries in field cost-of-living of year 2019 to cost-of-living_2019.csv
+2020-03-31 14:30:33,594 : INFO : welfare_logger : Finished writing countries in field cost-of-living of year 2019 to cost-of-living_2019.csv
+2020-03-31 14:30:33,594 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:35,217 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:35,218 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:35,230 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:35,230 : INFO : welfare_logger : Started writing countries in field crime of year 2010 to crime_2010.csv
+2020-03-31 14:30:35,253 : INFO : welfare_logger : Finished writing countries in field crime of year 2010 to crime_2010.csv
+2020-03-31 14:30:35,253 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:36,857 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:36,858 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:36,869 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:36,869 : INFO : welfare_logger : Started writing countries in field crime of year 2011 to crime_2011.csv
+2020-03-31 14:30:36,875 : INFO : welfare_logger : Finished writing countries in field crime of year 2011 to crime_2011.csv
+2020-03-31 14:30:36,875 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:38,291 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:38,292 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:38,304 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:38,304 : INFO : welfare_logger : Started writing countries in field crime of year 2012 to crime_2012.csv
+2020-03-31 14:30:38,310 : INFO : welfare_logger : Finished writing countries in field crime of year 2012 to crime_2012.csv
+2020-03-31 14:30:38,310 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:39,934 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:39,934 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:39,947 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:39,948 : INFO : welfare_logger : Started writing countries in field crime of year 2013 to crime_2013.csv
+2020-03-31 14:30:39,953 : INFO : welfare_logger : Finished writing countries in field crime of year 2013 to crime_2013.csv
+2020-03-31 14:30:39,954 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:41,573 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:41,573 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:41,611 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:41,611 : INFO : welfare_logger : Started writing countries in field crime of year 2014 to crime_2014.csv
+2020-03-31 14:30:41,624 : INFO : welfare_logger : Finished writing countries in field crime of year 2014 to crime_2014.csv
+2020-03-31 14:30:41,624 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:43,166 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:43,167 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:43,207 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:43,207 : INFO : welfare_logger : Started writing countries in field crime of year 2015 to crime_2015.csv
+2020-03-31 14:30:43,221 : INFO : welfare_logger : Finished writing countries in field crime of year 2015 to crime_2015.csv
+2020-03-31 14:30:43,221 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2016
+2020-03-31 14:30:44,850 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2016
+2020-03-31 14:30:44,850 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2016
+2020-03-31 14:30:44,887 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2016
+2020-03-31 14:30:44,887 : INFO : welfare_logger : Started writing countries in field crime of year 2016 to crime_2016.csv
+2020-03-31 14:30:44,899 : INFO : welfare_logger : Finished writing countries in field crime of year 2016 to crime_2016.csv
+2020-03-31 14:30:44,899 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2017
+2020-03-31 14:30:46,489 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2017
+2020-03-31 14:30:46,490 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2017
+2020-03-31 14:30:46,525 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2017
+2020-03-31 14:30:46,525 : INFO : welfare_logger : Started writing countries in field crime of year 2017 to crime_2017.csv
+2020-03-31 14:30:46,539 : INFO : welfare_logger : Finished writing countries in field crime of year 2017 to crime_2017.csv
+2020-03-31 14:30:46,539 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2018
+2020-03-31 14:30:48,133 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2018
+2020-03-31 14:30:48,133 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2018
+2020-03-31 14:30:48,167 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2018
+2020-03-31 14:30:48,167 : INFO : welfare_logger : Started writing countries in field crime of year 2018 to crime_2018.csv
+2020-03-31 14:30:48,179 : INFO : welfare_logger : Finished writing countries in field crime of year 2018 to crime_2018.csv
+2020-03-31 14:30:48,179 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2019
+2020-03-31 14:30:49,767 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2019
+2020-03-31 14:30:49,768 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2019
+2020-03-31 14:30:49,802 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2019
+2020-03-31 14:30:49,802 : INFO : welfare_logger : Started writing countries in field crime of year 2019 to crime_2019.csv
+2020-03-31 14:30:49,846 : INFO : welfare_logger : Finished writing countries in field crime of year 2019 to crime_2019.csv
+2020-03-31 14:30:49,846 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:51,341 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:51,341 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:51,353 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2010
+2020-03-31 14:30:51,353 : INFO : welfare_logger : Started writing countries in field health-care of year 2010 to health-care_2010.csv
+2020-03-31 14:30:51,359 : INFO : welfare_logger : Finished writing countries in field health-care of year 2010 to health-care_2010.csv
+2020-03-31 14:30:51,359 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:52,841 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:52,842 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:52,854 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2011
+2020-03-31 14:30:52,854 : INFO : welfare_logger : Started writing countries in field health-care of year 2011 to health-care_2011.csv
+2020-03-31 14:30:52,859 : INFO : welfare_logger : Finished writing countries in field health-care of year 2011 to health-care_2011.csv
+2020-03-31 14:30:52,859 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:54,480 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:54,480 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:54,492 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2012
+2020-03-31 14:30:54,492 : INFO : welfare_logger : Started writing countries in field health-care of year 2012 to health-care_2012.csv
+2020-03-31 14:30:54,497 : INFO : welfare_logger : Finished writing countries in field health-care of year 2012 to health-care_2012.csv
+2020-03-31 14:30:54,497 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:56,119 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:56,120 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:56,132 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2013
+2020-03-31 14:30:56,132 : INFO : welfare_logger : Started writing countries in field health-care of year 2013 to health-care_2013.csv
+2020-03-31 14:30:56,138 : INFO : welfare_logger : Finished writing countries in field health-care of year 2013 to health-care_2013.csv
+2020-03-31 14:30:56,138 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:57,759 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:57,760 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:57,786 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2014
+2020-03-31 14:30:57,786 : INFO : welfare_logger : Started writing countries in field health-care of year 2014 to health-care_2014.csv
+2020-03-31 14:30:57,796 : INFO : welfare_logger : Finished writing countries in field health-care of year 2014 to health-care_2014.csv
+2020-03-31 14:30:57,796 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:59,400 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:59,400 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:59,434 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2015
+2020-03-31 14:30:59,434 : INFO : welfare_logger : Started writing countries in field health-care of year 2015 to health-care_2015.csv
+2020-03-31 14:30:59,447 : INFO : welfare_logger : Finished writing countries in field health-care of year 2015 to health-care_2015.csv
+2020-03-31 14:30:59,447 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:01,038 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:01,038 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:01,063 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:01,064 : INFO : welfare_logger : Started writing countries in field health-care of year 2016 to health-care_2016.csv
+2020-03-31 14:31:01,073 : INFO : welfare_logger : Finished writing countries in field health-care of year 2016 to health-care_2016.csv
+2020-03-31 14:31:01,073 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:02,676 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:02,677 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:02,705 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:02,705 : INFO : welfare_logger : Started writing countries in field health-care of year 2017 to health-care_2017.csv
+2020-03-31 14:31:02,715 : INFO : welfare_logger : Finished writing countries in field health-care of year 2017 to health-care_2017.csv
+2020-03-31 14:31:02,715 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:04,314 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:04,315 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:04,341 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:04,341 : INFO : welfare_logger : Started writing countries in field health-care of year 2018 to health-care_2018.csv
+2020-03-31 14:31:04,350 : INFO : welfare_logger : Finished writing countries in field health-care of year 2018 to health-care_2018.csv
+2020-03-31 14:31:04,350 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:05,954 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:05,955 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:05,982 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/health-care/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:05,982 : INFO : welfare_logger : Started writing countries in field health-care of year 2019 to health-care_2019.csv
+2020-03-31 14:31:05,992 : INFO : welfare_logger : Finished writing countries in field health-care of year 2019 to health-care_2019.csv
+2020-03-31 14:31:05,992 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:07,593 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:07,593 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:07,606 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:07,606 : INFO : welfare_logger : Started writing countries in field pollution of year 2010 to pollution_2010.csv
+2020-03-31 14:31:07,611 : INFO : welfare_logger : Finished writing countries in field pollution of year 2010 to pollution_2010.csv
+2020-03-31 14:31:07,611 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:09,232 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:09,233 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:09,245 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:09,246 : INFO : welfare_logger : Started writing countries in field pollution of year 2011 to pollution_2011.csv
+2020-03-31 14:31:09,252 : INFO : welfare_logger : Finished writing countries in field pollution of year 2011 to pollution_2011.csv
+2020-03-31 14:31:09,252 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:11,076 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:11,076 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:11,102 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:11,102 : INFO : welfare_logger : Started writing countries in field pollution of year 2012 to pollution_2012.csv
+2020-03-31 14:31:11,110 : INFO : welfare_logger : Finished writing countries in field pollution of year 2012 to pollution_2012.csv
+2020-03-31 14:31:11,110 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:12,715 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:12,715 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:12,742 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:12,742 : INFO : welfare_logger : Started writing countries in field pollution of year 2013 to pollution_2013.csv
+2020-03-31 14:31:12,750 : INFO : welfare_logger : Finished writing countries in field pollution of year 2013 to pollution_2013.csv
+2020-03-31 14:31:12,750 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:14,353 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:14,354 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:14,408 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:14,408 : INFO : welfare_logger : Started writing countries in field pollution of year 2014 to pollution_2014.csv
+2020-03-31 14:31:14,424 : INFO : welfare_logger : Finished writing countries in field pollution of year 2014 to pollution_2014.csv
+2020-03-31 14:31:14,424 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:15,993 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:15,994 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:16,054 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:16,054 : INFO : welfare_logger : Started writing countries in field pollution of year 2015 to pollution_2015.csv
+2020-03-31 14:31:16,071 : INFO : welfare_logger : Finished writing countries in field pollution of year 2015 to pollution_2015.csv
+2020-03-31 14:31:16,071 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:17,633 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:17,633 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:17,682 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:17,682 : INFO : welfare_logger : Started writing countries in field pollution of year 2016 to pollution_2016.csv
+2020-03-31 14:31:17,694 : INFO : welfare_logger : Finished writing countries in field pollution of year 2016 to pollution_2016.csv
+2020-03-31 14:31:17,694 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:19,478 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:19,478 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:19,529 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:19,529 : INFO : welfare_logger : Started writing countries in field pollution of year 2017 to pollution_2017.csv
+2020-03-31 14:31:19,545 : INFO : welfare_logger : Finished writing countries in field pollution of year 2017 to pollution_2017.csv
+2020-03-31 14:31:19,545 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:22,240 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:22,241 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:22,287 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:22,287 : INFO : welfare_logger : Started writing countries in field pollution of year 2018 to pollution_2018.csv
+2020-03-31 14:31:22,298 : INFO : welfare_logger : Finished writing countries in field pollution of year 2018 to pollution_2018.csv
+2020-03-31 14:31:22,298 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:24,290 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:24,291 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:24,333 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/pollution/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:24,333 : INFO : welfare_logger : Started writing countries in field pollution of year 2019 to pollution_2019.csv
+2020-03-31 14:31:24,346 : INFO : welfare_logger : Finished writing countries in field pollution of year 2019 to pollution_2019.csv
+2020-03-31 14:31:24,346 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:27,568 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:27,569 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:27,645 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:27,645 : INFO : welfare_logger : Started writing countries in field property-investment of year 2010 to property-investment_2010.csv
+2020-03-31 14:31:27,665 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2010 to property-investment_2010.csv
+2020-03-31 14:31:27,666 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:29,206 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:29,207 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:29,278 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:29,278 : INFO : welfare_logger : Started writing countries in field property-investment of year 2011 to property-investment_2011.csv
+2020-03-31 14:31:29,297 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2011 to property-investment_2011.csv
+2020-03-31 14:31:29,297 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:30,845 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:30,846 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:30,901 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:30,901 : INFO : welfare_logger : Started writing countries in field property-investment of year 2012 to property-investment_2012.csv
+2020-03-31 14:31:30,920 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2012 to property-investment_2012.csv
+2020-03-31 14:31:30,920 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:32,485 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:32,485 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:32,538 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:32,538 : INFO : welfare_logger : Started writing countries in field property-investment of year 2013 to property-investment_2013.csv
+2020-03-31 14:31:32,557 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2013 to property-investment_2013.csv
+2020-03-31 14:31:32,557 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:34,945 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:34,946 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:35,022 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:35,022 : INFO : welfare_logger : Started writing countries in field property-investment of year 2014 to property-investment_2014.csv
+2020-03-31 14:31:35,048 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2014 to property-investment_2014.csv
+2020-03-31 14:31:35,048 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:36,502 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:36,503 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:36,563 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:36,563 : INFO : welfare_logger : Started writing countries in field property-investment of year 2015 to property-investment_2015.csv
+2020-03-31 14:31:36,584 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2015 to property-investment_2015.csv
+2020-03-31 14:31:36,584 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:38,220 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:38,221 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:38,273 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:38,273 : INFO : welfare_logger : Started writing countries in field property-investment of year 2016 to property-investment_2016.csv
+2020-03-31 14:31:38,291 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2016 to property-investment_2016.csv
+2020-03-31 14:31:38,291 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:39,859 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:39,860 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:39,911 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:39,911 : INFO : welfare_logger : Started writing countries in field property-investment of year 2017 to property-investment_2017.csv
+2020-03-31 14:31:39,929 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2017 to property-investment_2017.csv
+2020-03-31 14:31:39,929 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:42,030 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:42,030 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:42,081 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:42,081 : INFO : welfare_logger : Started writing countries in field property-investment of year 2018 to property-investment_2018.csv
+2020-03-31 14:31:42,098 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2018 to property-investment_2018.csv
+2020-03-31 14:31:42,098 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:43,751 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:43,752 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:43,836 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/property-investment/rankings_by_country.jsp?title=2019
+2020-03-31 14:31:43,836 : INFO : welfare_logger : Started writing countries in field property-investment of year 2019 to property-investment_2019.csv
+2020-03-31 14:31:43,854 : INFO : welfare_logger : Finished writing countries in field property-investment of year 2019 to property-investment_2019.csv
+2020-03-31 14:31:43,854 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:45,389 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:45,390 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:45,402 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2010
+2020-03-31 14:31:45,402 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2010 to quality-of-life_2010.csv
+2020-03-31 14:31:45,408 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2010 to quality-of-life_2010.csv
+2020-03-31 14:31:45,408 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:47,033 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:47,033 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:47,046 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2011
+2020-03-31 14:31:47,046 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2011 to quality-of-life_2011.csv
+2020-03-31 14:31:47,052 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2011 to quality-of-life_2011.csv
+2020-03-31 14:31:47,053 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:48,667 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:48,667 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:48,681 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2012
+2020-03-31 14:31:48,681 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2012 to quality-of-life_2012.csv
+2020-03-31 14:31:48,687 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2012 to quality-of-life_2012.csv
+2020-03-31 14:31:48,687 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:50,306 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:50,307 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:50,331 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2013
+2020-03-31 14:31:50,331 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2013 to quality-of-life_2013.csv
+2020-03-31 14:31:50,343 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2013 to quality-of-life_2013.csv
+2020-03-31 14:31:50,343 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:51,945 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:51,946 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:51,994 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2014
+2020-03-31 14:31:51,994 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2014 to quality-of-life_2014.csv
+2020-03-31 14:31:52,012 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2014 to quality-of-life_2014.csv
+2020-03-31 14:31:52,012 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:53,586 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:53,587 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:53,641 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2015
+2020-03-31 14:31:53,641 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2015 to quality-of-life_2015.csv
+2020-03-31 14:31:53,660 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2015 to quality-of-life_2015.csv
+2020-03-31 14:31:53,660 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:55,464 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:55,465 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:55,504 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2016
+2020-03-31 14:31:55,504 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2016 to quality-of-life_2016.csv
+2020-03-31 14:31:55,518 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2016 to quality-of-life_2016.csv
+2020-03-31 14:31:55,518 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:57,066 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:57,066 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:57,127 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2017
+2020-03-31 14:31:57,127 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2017 to quality-of-life_2017.csv
+2020-03-31 14:31:57,144 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2017 to quality-of-life_2017.csv
+2020-03-31 14:31:57,144 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:58,704 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:58,704 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:58,761 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2018
+2020-03-31 14:31:58,761 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2018 to quality-of-life_2018.csv
+2020-03-31 14:31:58,777 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2018 to quality-of-life_2018.csv
+2020-03-31 14:31:58,777 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2019
+2020-03-31 14:32:00,139 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2019
+2020-03-31 14:32:00,140 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2019
+2020-03-31 14:32:00,201 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2019
+2020-03-31 14:32:00,201 : INFO : welfare_logger : Started writing countries in field quality-of-life of year 2019 to quality-of-life_2019.csv
+2020-03-31 14:32:00,218 : INFO : welfare_logger : Finished writing countries in field quality-of-life of year 2019 to quality-of-life_2019.csv
+2020-03-31 14:32:00,218 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2010
+2020-03-31 14:32:01,776 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2010
+2020-03-31 14:32:01,777 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2010
+2020-03-31 14:32:01,789 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2010
+2020-03-31 14:32:01,789 : INFO : welfare_logger : Started writing countries in field traffic of year 2010 to traffic_2010.csv
+2020-03-31 14:32:01,795 : INFO : welfare_logger : Finished writing countries in field traffic of year 2010 to traffic_2010.csv
+2020-03-31 14:32:01,795 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2011
+2020-03-31 14:32:03,415 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2011
+2020-03-31 14:32:03,416 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2011
+2020-03-31 14:32:03,428 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2011
+2020-03-31 14:32:03,428 : INFO : welfare_logger : Started writing countries in field traffic of year 2011 to traffic_2011.csv
+2020-03-31 14:32:03,434 : INFO : welfare_logger : Finished writing countries in field traffic of year 2011 to traffic_2011.csv
+2020-03-31 14:32:03,434 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2012
+2020-03-31 14:32:05,260 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2012
+2020-03-31 14:32:05,260 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2012
+2020-03-31 14:32:05,272 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2012
+2020-03-31 14:32:05,272 : INFO : welfare_logger : Started writing countries in field traffic of year 2012 to traffic_2012.csv
+2020-03-31 14:32:05,278 : INFO : welfare_logger : Finished writing countries in field traffic of year 2012 to traffic_2012.csv
+2020-03-31 14:32:05,278 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2013
+2020-03-31 14:32:06,897 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2013
+2020-03-31 14:32:06,898 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2013
+2020-03-31 14:32:06,920 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2013
+2020-03-31 14:32:06,921 : INFO : welfare_logger : Started writing countries in field traffic of year 2013 to traffic_2013.csv
+2020-03-31 14:32:06,928 : INFO : welfare_logger : Finished writing countries in field traffic of year 2013 to traffic_2013.csv
+2020-03-31 14:32:06,928 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:08,537 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:08,538 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:08,575 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:08,576 : INFO : welfare_logger : Started writing countries in field traffic of year 2014 to traffic_2014.csv
+2020-03-31 14:32:08,588 : INFO : welfare_logger : Finished writing countries in field traffic of year 2014 to traffic_2014.csv
+2020-03-31 14:32:08,588 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2015
+2020-03-31 14:32:10,138 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2015
+2020-03-31 14:32:10,139 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2015
+2020-03-31 14:32:10,194 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2015
+2020-03-31 14:32:10,194 : INFO : welfare_logger : Started writing countries in field traffic of year 2015 to traffic_2015.csv
+2020-03-31 14:32:10,209 : INFO : welfare_logger : Finished writing countries in field traffic of year 2015 to traffic_2015.csv
+2020-03-31 14:32:10,209 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2016
+2020-03-31 14:32:11,814 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2016
+2020-03-31 14:32:11,814 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2016
+2020-03-31 14:32:11,846 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2016
+2020-03-31 14:32:11,846 : INFO : welfare_logger : Started writing countries in field traffic of year 2016 to traffic_2016.csv
+2020-03-31 14:32:11,857 : INFO : welfare_logger : Finished writing countries in field traffic of year 2016 to traffic_2016.csv
+2020-03-31 14:32:11,857 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2017
+2020-03-31 14:32:13,452 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2017
+2020-03-31 14:32:13,453 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2017
+2020-03-31 14:32:13,517 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2017
+2020-03-31 14:32:13,518 : INFO : welfare_logger : Started writing countries in field traffic of year 2017 to traffic_2017.csv
+2020-03-31 14:32:13,530 : INFO : welfare_logger : Finished writing countries in field traffic of year 2017 to traffic_2017.csv
+2020-03-31 14:32:13,530 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:32:15,093 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:32:15,093 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:32:15,140 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:32:15,140 : INFO : welfare_logger : Started writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:32:15,152 : INFO : welfare_logger : Finished writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:32:15,152 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2019
+2020-03-31 14:32:24,553 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:26,356 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:26,356 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:26,394 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:52,199 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:54,006 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:54,007 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:54,058 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/crime/rankings_by_country.jsp?title=2014
+2020-03-31 14:32:54,058 : INFO : welfare_logger : Started writing countries in field crime of year 2014 to crime_2014.csv
+2020-03-31 14:32:54,073 : INFO : welfare_logger : Finished writing countries in field crime of year 2014 to crime_2014.csv
+2020-03-31 14:35:09,685 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:11,027 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:11,028 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:11,064 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:11,064 : INFO : welfare_logger : Started writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:35:11,075 : INFO : welfare_logger : Finished writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:35:27,177 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:28,850 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:28,851 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:28,885 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:28,885 : INFO : welfare_logger : Started writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:35:28,898 : INFO : welfare_logger : Finished writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:35:49,150 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:50,765 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:50,766 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:50,805 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:35:50,805 : INFO : welfare_logger : Started writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:35:50,819 : INFO : welfare_logger : Finished writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:36:40,469 : INFO : welfare_logger : Started fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:36:41,765 : INFO : welfare_logger : Finished fetching data from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:36:41,766 : INFO : welfare_logger : Started parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:36:41,804 : INFO : welfare_logger : Finished parsing response from https://www.numbeo.com/traffic/rankings_by_country.jsp?title=2018
+2020-03-31 14:36:41,804 : INFO : welfare_logger : Started writing countries in field traffic of year 2018 to traffic_2018.csv
+2020-03-31 14:36:41,817 : INFO : welfare_logger : Finished writing countries in field traffic of year 2018 to traffic_2018.csv
