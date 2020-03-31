@@ -1,13 +1,20 @@
 """
     Constants file to be accessed from all of the project
 """
+
+FIRST_YEAR = 2010
+
+# Logger
 LOGGER_NAME = 'welfare_logger'
 LOG_FILE_NAME = 'welfare_log_file.log'
-FIRST_YEAR = 2019
+
+# URL Requests/Responses
 SUBJECT = '<SUBJECT>'
 YEAR = '<YEAR>'
 MAIN_URL = f'https://www.numbeo.com/{SUBJECT}/rankings_by_country.jsp?title={YEAR}'
 HTTP_SUCCESS = 200
+
+# HELP
 TABLE_HELP_DESC = 'use this option and enter 2 arguments:\
                    \nsubject: {cost-of-living, crime, health-care, pollution, \
                     property-investment, quality-of-life, traffic}\nyear: <year> \
@@ -21,3 +28,9 @@ HELP_DESC = 'Welcome to command line options help. 2 options are available:\
             'and copy into csv files'
 CSV_HELP_DESC = 'this option does not take any argument, if true, this option will copy \
                     the table(s) into a csv(s) file <subject>_<year>.csv into your current directory'
+
+# MySQL
+DATABASE_NAME= 'parser'
+HOST = 'localhost'
+USERNAME = 'root'
+PASSWD= 'azerty051210'

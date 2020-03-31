@@ -48,7 +48,7 @@ class WelfareManager:
     def log_all_years_ranking(self, subject):
         current_year = int(datetime.datetime.now().year)
         for year in range(settings.FIRST_YEAR, current_year):
-            # We don't want current_year outputted to the user because that data of the current year isn't full
+            # We don't want current_year outputted to the user because the data of the current year isn't full
             self.log_ranking(subject, str(year))
 
     def log_ranking_to_csv(self, subject, year):
@@ -61,7 +61,7 @@ class WelfareManager:
         current_year = int(datetime.datetime.now().year)
         for welfare_type in WelfareType:
             for year in range(settings.FIRST_YEAR, current_year):
-                # We don't want current_year outputted to the user because that data of the current year isn't full
+                # We don't want current_year outputted to the user because the data of the current year isn't full
                 self.log_ranking_to_csv(welfare_type.value, str(year))
 
 
@@ -81,7 +81,7 @@ def main():
     welfare_manager = WelfareManager()
     parser = argparse.ArgumentParser(description=settings.HELP_DESC)
     parser.add_argument('--table', nargs='*', action='store', help=settings.TABLE_HELP_DESC)
-    parser.add_argument('--to_csv', action='store_true', help=settings.CSV_HELP_DESC)
+    parser.add_argument('--csv', action='store_true', help=settings.CSV_HELP_DESC)
     args = parser.parse_args()
     current_year = int(datetime.datetime.now().year)
     if args.table:
@@ -94,13 +94,13 @@ def main():
                 except (AssertionError, Exception) as err:
 
                     print(f'You have entered a wrong parameter for your {counter + 1}th iteration.\n'
-                          f' Parameters {args.table[0]} and {args.table[1]} are not valid.\n'
-                          f'use --help for more information')
+                          f'Parameters {args.table[0]} and {args.table[1]} are not valid.\n'
+                          f'Use --help for more information')
                     sys.exit()
                 else:
                     if args.to_csv:
                         welfare_manager.log_ranking_to_csv(*args.table[0:2])
-                        print(f'file {args.table[0]}_{args.table[1]}.csv has been created in your current directory')
+                        print(f'File {args.table[0]}_{args.table[1]}.csv has been created in your current directory')
                         counter += 1
                         args.table.clear()
                     else:

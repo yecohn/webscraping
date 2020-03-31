@@ -5,15 +5,11 @@ import welfare_manager
 import datetime
 import mysql.connector
 from _collections import defaultdict
-DATABASE_NAME= 'parser'
-HOST = 'localhost'
-USERNAME = 'root'
-PASSWD= 'azerty051210'
 
 try:
     mydb = mysql.connector.connect(host=HOST,
-                               user =USERNAME,
-                               passwd =PASSWD,
+                                user =USERNAME,
+                                passwd =PASSWD,
                                database =DATABASE_NAME)
 
     cur = mydb.cursor()
