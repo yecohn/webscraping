@@ -27,14 +27,19 @@ def log_ranking(subject, year):
     config.pprint.pprint(config.countries_data)
 
 
-def log_all_rankings():
-    pool = mp.Pool()
+def log_all_rankings(asynchronous=True):
+    if asynchronous:
+        pool = mp.Pool()
     for subject in config.WelfareType:
         for year in range(config.FIRST_YEAR, config.CURRENT_YEAR):
             # We don't want current_year outputted to the user because the data of the current year isn't full
-            pool.apply_async(log_ranking, args=(subject.value, str(year)))
-    pool.close()
-    pool.join()
+            if asynchronous:
+                pool.apply_async(log_ranking, args=(subject.value, str(year)))
+            else:
+                log_ranking(subject.value, str(year))
+    if asynchronous:
+        pool.close()
+        pool.join()
 
 
 def print_tables_of_user_input():
@@ -60,7 +65,7 @@ def print_tables_of_user_input():
                 print('\n\n\n')
                 del args.table[:2]
     else:  # all tables
-        log_all_rankings()
+        log_all_rankings(asynchronous=False)
 
 
 def store_data_in_DB():
@@ -72,7 +77,7 @@ def store_data_in_DB():
 
 def main():
     config.setup()
-    #print_tables_of_user_input()
+    print_tables_of_user_input()
     store_data_in_DB()
 
 
