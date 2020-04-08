@@ -1,12 +1,12 @@
 from bs4 import BeautifulSoup
 import requests
-import settings
+import config
 
 
 class WelfareHTMLLoader:
 
     def __init__(self, subject, year):
-        self.url = settings.MAIN_URL.replace(settings.SUBJECT, subject).replace(settings.YEAR, year)
+        self.url = config.MAIN_URL.replace(config.SUBJECT, subject).replace(config.YEAR, year)
         self.subject = subject
         self.year = year
         self.response_text = None
@@ -18,27 +18,27 @@ class WelfareHTMLLoader:
         return self.response_soup
 
     def _fetch_text_from_url(self):
-        settings.logger.info(f'Started fetching data from {self.url}')
+        config.logger.info(f'Started fetching data from {self.url}')
         try:
             response = requests.get(self.url)
         except (TypeError, ConnectionError, Exception) as e:
-            settings.logger.critical(e, exc_info=True)
-            settings.exit_program()
-        if response.status_code != settings.HTTP_SUCCESS:
-            settings.logger.critical(f'Error fetching data from {self.url}')
-            settings.exit_program()
-        settings.logger.info(f'Finished fetching data from {self.url}')
+            config.logger.critical(e, exc_info=True)
+            config.exit_program()
+        if response.status_code != config.HTTP_SUCCESS:
+            config.logger.critical(f'Error fetching data from {self.url}')
+            config.exit_program()
+        config.logger.info(f'Finished fetching data from {self.url}')
         return response.text
 
     def _parse_response(self):
-        settings.logger.info(f'Started parsing response from {self.url}')
+        config.logger.info(f'Started parsing response from {self.url}')
         try:
             self.response_soup = BeautifulSoup(self.response_text, 'html.parser')
-            settings.logger.info(f'Finished parsing response from {self.url}')
+            config.logger.info(f'Finished parsing response from {self.url}')
             return self.response_soup
         except (TypeError, Exception) as e:
-            settings.logger.critical(e, exc_info=True)
-            settings.exit_program()
+            config.logger.critical(e, exc_info=True)
+            config.exit_program()
 
 
 class WelfareHTMLParser:
