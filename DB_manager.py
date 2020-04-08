@@ -5,8 +5,8 @@ import config
 class DBManager:
 
     def __init__(self):
+        config.logger.info(f'Started connecting to DB "{config.DATABASE_NAME}"')
         try:
-            config.logger.info(f'Started connecting to DB "{config.DATABASE_NAME}"')
             self.welfare_db = mysql.connector.connect(host=config.HOST,
                                                       user=config.USERNAME,
                                                       passwd=config.PASSWORD)
@@ -26,8 +26,7 @@ class DBManager:
         config.logger.info(f'Finished setting up DB "{config.DATABASE_NAME}"')
 
     def connect_to_DB(self):
-        self.cur.execute(f'DROP DATABASE IF EXISTS {config.DATABASE_NAME}')
-        self.cur.execute(f'CREATE DATABASE {config.DATABASE_NAME}')
+        self.cur.execute(f'CREATE DATABASE IF NOT EXISTS {config.DATABASE_NAME}')
         self.cur.execute(f'USE {config.DATABASE_NAME}')
         config.logger.info(f'Finished connecting to DB "{config.DATABASE_NAME}"')
 
