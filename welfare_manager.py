@@ -5,6 +5,8 @@ import welfare_html_parser
 import DB_manager
 import multiprocessing as mp
 
+countries = []
+
 
 def log_exception_and_quit(e=None):
     if e is not None:
@@ -19,27 +21,21 @@ def log_ranking(subject, year):
     html_loader.get_data()
     parser = welfare_html_parser.WelfareHTMLParser(html_loader)
     countries_with_data = parser.get_countries_with_headline()
+    if len(countries_with_data) > 1:
+        countries.extend(list(zip(*countries_with_data[1:]))[0])
     config.countries_data[f'{subject}_{year}'] = countries_with_data
-    for index, country_data in enumerate(countries_with_data[1:]):
-        config.countries_dict[country_data[0]] = index + 1
     # We want one line to appear in the log file but a pretty print for the user
     config.logger.info(config.countries_data)
     config.pprint.pprint(config.countries_data)
 
 
-def log_all_rankings(asynchronous=True):
-    if asynchronous:
-        pool = mp.Pool()
+def log_all_rankings():
     for subject in config.WelfareType:
         for year in range(config.FIRST_YEAR, config.CURRENT_YEAR):
             # We don't want current_year outputted to the user because the data of the current year isn't full
-            if asynchronous:
-                pool.apply_async(log_ranking, args=(subject.value, str(year)))
-            else:
-                log_ranking(subject.value, str(year))
-    if asynchronous:
-        pool.close()
-        pool.join()
+            log_ranking(subject.value, str(year))
+    for index, country_data in enumerate(set(countries)):
+        config.countries_dict[country_data] = index + 1
 
 
 def print_tables_of_user_input():
@@ -65,7 +61,7 @@ def print_tables_of_user_input():
                 print('\n\n\n')
                 del args.table[:2]
     else:  # all tables
-        log_all_rankings(asynchronous=False)
+        log_all_rankings()
 
 
 def store_data_in_DB():

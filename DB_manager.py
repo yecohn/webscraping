@@ -35,12 +35,12 @@ class DBManager:
         self.welfare_db.close()
 
     def _create_table(self, subject, year, create_table_query, insert_into_query):
-        table_name = f'{subject}_{year}'
-        if table_name not in list(config.countries_data.keys()):
+        data_name = f'{subject}_{year}'
+        if data_name not in list(config.countries_data.keys()):
             return
         self.cur.execute(create_table_query)
         self.welfare_db.commit()
-        for row in config.countries_data[table_name][1:]:
+        for row in config.countries_data[data_name][1:]:
             country_name = row[0]
             if country_name not in config.countries_dict:
                 continue
@@ -49,11 +49,11 @@ class DBManager:
                 continue
             self.cur.execute(insert_into_query, fields)
             self.welfare_db.commit()
-        config.logger.info(f'Created table "{table_name}"')
+        config.logger.info(f'Created table "{subject}"')
 
     def _create_table_countries(self):
-        self.cur.execute('''CREATE TABLE countries( country_id INT PRIMARY KEY,
-                                                    country_name VARCHAR(255))''')
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS countries(country_id INT PRIMARY KEY,
+                                                                country_name VARCHAR(255))''')
         self.welfare_db.commit()
         query = "INSERT INTO countries (country_id, country_name) VALUES (%s, %s)"
         countries_list = [(country_id, country_name) for country_name, country_id in config.countries_dict.items()]
@@ -64,7 +64,7 @@ class DBManager:
     def _create_table_property_investment(self, year):
         subject = config.WelfareType.property_investment.value
         create_table_query = '''
-                                CREATE TABLE property_investment(
+                                CREATE TABLE IF NOT EXISTS property_investment(
                                                             id INT PRIMARY KEY AUTO_INCREMENT,
                                                             country_id INT,
                                                             year INT,
@@ -97,7 +97,7 @@ class DBManager:
     def _create_table_cost_of_living(self, year):
         subject = config.WelfareType.cost_of_living.value
         create_table_query = '''
-                                CREATE TABLE cost_of_living(
+                                CREATE TABLE IF NOT EXISTS cost_of_living(
                                                         id INT PRIMARY KEY AUTO_INCREMENT,
                                                         country_id INT,
                                                         year INT,
@@ -128,7 +128,7 @@ class DBManager:
     def _create_table_crime(self, year):
         subject = config.WelfareType.crime.value
         create_table_query = '''
-                                CREATE TABLE  crime(
+                                CREATE TABLE IF NOT EXISTS crime(
                                                     id INT PRIMARY KEY AUTO_INCREMENT,
                                                     country_id INT,
                                                     year INT,
@@ -150,7 +150,7 @@ class DBManager:
     def _create_table_quality_of_life(self, year):
         subject = config.WelfareType.quality_of_life.value
         create_table_query = '''
-                                CREATE TABLE  quality_life(
+                                CREATE TABLE IF NOT EXISTS quality_life(
                                                             id  INT PRIMARY KEY AUTO_INCREMENT,
                                                             country_id INT,
                                                             year INT,
@@ -185,7 +185,7 @@ class DBManager:
     def _create_table_pollution(self, year):
         subject = config.WelfareType.pollution.value
         create_table_query = '''
-                                CREATE TABLE  pollution(
+                                CREATE TABLE IF NOT EXISTS pollution(
                                                         id INT PRIMARY KEY AUTO_INCREMENT,
                                                         country_id INT,
                                                         year INT,
@@ -208,7 +208,7 @@ class DBManager:
     def _create_table_health_care(self, year):
         subject = config.WelfareType.health_care.value
         create_table_query = '''
-                                CREATE TABLE  health_care(
+                                CREATE TABLE IF NOT EXISTS health_care(
                                                             id INT PRIMARY KEY AUTO_INCREMENT,
                                                             country_id INT,
                                                             year INT,
@@ -231,7 +231,7 @@ class DBManager:
     def _create_table_traffic(self, year):
         subject = config.WelfareType.traffic.value
         create_table_query = '''
-                                CREATE TABLE traffic(
+                                CREATE TABLE IF NOT EXISTS traffic(
                                                         id INT PRIMARY KEY AUTO_INCREMENT,
                                                         country_id INT,
                                                         year INT,
