@@ -20,7 +20,8 @@ def log_ranking(subject, year):
     parser = welfare_html_parser.WelfareHTMLParser(html_loader)
     countries_with_data = parser.get_countries_with_headline()
     config.countries_data[f'{subject}_{year}'] = countries_with_data
-    config.countries_list = [country_data[0] for country_data in countries_with_data[1:]]
+    for index, country_data in enumerate(countries_with_data[1:]):
+        config.countries_dict[country_data[0]] = index + 1
     # We want one line to appear in the log file but a pretty print for the user
     config.logger.info(config.countries_data)
     config.pprint.pprint(config.countries_data)
