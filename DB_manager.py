@@ -18,14 +18,85 @@ class DBManager:
     def setup_DB(self):
         config.logger.info(f'Started setting up DB "{config.DATABASE_NAME}"')
         self._create_table_countries()
-        years = list(range(2010, config.CURRENT_YEAR))
+        years = list(range(config.FIRST_YEAR, config.LAST_YEAR + 1))
         welfare_types = [welfare_type.value.replace('-', '_') for welfare_type in config.WelfareType]
         for year in years:
             for welfare_type in welfare_types:
-                eval(f'self._create_table_{welfare_type}({year})')
+                pass
+                # eval(f'self._create_table_{welfare_type}({year})')
+        for health_indicator in config.HealthIndicator:
+            eval(f'self._create_table_health_{health_indicator.name}()')
         config.logger.info(f'Finished setting up DB "{config.DATABASE_NAME}"')
 
+    def _create_table_health_road_death_rate(self):
+        table_name = config.HealthIndicator.road_death_rate.name
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {table_name} (
+                                                            id INT PRIMARY KEY AUTO_INCREMENT,
+                                                            country_id INT,
+                                                            year INT,
+                                                            value FLOAT,
+                                                            description VARCHAR(255),
+                                                            FOREIGN KEY (country_id) REFERENCES countries(country_id)
+                                                                    )
+                                    '''
+        insert_into_query = f'''
+                                INSERT INTO {table_name} (
+                                                    country_id, 
+                                                    year,
+                                                    value, 
+                                                    description
+                                                    ) 
+                                                    VALUES (%s,%s, %s, %s)
+                                '''
+        self._create_table_health(table_name, create_table_query, insert_into_query)
+
+    def _create_table_health_pollution_death_rate(self):
+        table_name = config.HealthIndicator.pollution_death_rate.name
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {table_name} (
+                                                            id INT PRIMARY KEY AUTO_INCREMENT,
+                                                            country_id INT,
+                                                            year INT,
+                                                            value FLOAT,
+                                                            description VARCHAR(255),
+                                                            FOREIGN KEY (country_id) REFERENCES countries(country_id)
+                                                                    )
+                                    '''
+        insert_into_query = f'''
+                                INSERT INTO {table_name} (
+                                                    country_id, 
+                                                    year,
+                                                    value, 
+                                                    description
+                                                    ) 
+                                                    VALUES (%s,%s, %s, %s)
+                                '''
+        self._create_table_health(table_name, create_table_query, insert_into_query)
+
+    def _create_table_health(self, health_indicator, create_table_query, insert_into_query):
+        if health_indicator not in list(config.countries_health_data.keys()):
+            return
+        self.cur.execute(create_table_query)
+        self.welfare_db.commit()
+        desc = config.countries_health_data[health_indicator][0]
+        for row in config.countries_health_data[health_indicator][1]:
+            country_code = row['SpatialDim']
+            if country_code not in config.countries_codes:
+                pass
+            # country_id = config.countries_codes[country_code]
+            country_id = 'AAA'
+            year = row['TimeDim']
+            value = row['Value']
+            fields = (country_id, year, value, desc)
+            if fields is None:
+                continue
+            self.cur.execute(insert_into_query, fields)
+            self.welfare_db.commit()
+        config.logger.info(f'Created table "{health_indicator}"')
+
     def connect_to_DB(self):
+        self.cur.execute(f'DROP DATABASE IF EXISTS {config.DATABASE_NAME}')
         self.cur.execute(f'CREATE DATABASE IF NOT EXISTS {config.DATABASE_NAME}')
         self.cur.execute(f'USE {config.DATABASE_NAME}')
         config.logger.info(f'Finished connecting to DB "{config.DATABASE_NAME}"')
@@ -131,8 +202,8 @@ class DBManager:
                                                     id INT PRIMARY KEY AUTO_INCREMENT,
                                                     country_id INT,
                                                     year INT,
-                                                    crime_id FLOAT,
-                                                    safety_id FLOAT,
+                                                    crime_index FLOAT,
+                                                    safety_index FLOAT,
                                                     FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                     )
                                 '''
@@ -140,8 +211,8 @@ class DBManager:
                                 INSERT INTO crime (  
                                                     country_id, 
                                                     year, 
-                                                    crime_id, 
-                                                    safety_id) 
+                                                    crime_index, 
+                                                    safety_index) 
                                                     VALUES (%s, %s, %s, %s )
                             '''
         self._create_table(subject, year, create_table_query, insert_into_query)
@@ -153,30 +224,30 @@ class DBManager:
                                                             id  INT PRIMARY KEY AUTO_INCREMENT,
                                                             country_id INT,
                                                             year INT,
-                                                            quality_life_id FLOAT,
-                                                            purchase_power_id FLOAT,
-                                                            safety_id FLOAT,
-                                                            health_care_id FLOAT,
-                                                            cost_living_id FLOAT,
-                                                            property_price_to_income_id FLOAT,
-                                                            traffic_commute_time_id FLOAT,
-                                                            pollution_id FLOAT,
-                                                            climate_id VARCHAR(255),
+                                                            quality_life_index FLOAT,
+                                                            purchase_power_index FLOAT,
+                                                            safety_index FLOAT,
+                                                            health_care_index FLOAT,
+                                                            cost_living_index FLOAT,
+                                                            property_price_to_income_index FLOAT,
+                                                            traffic_commute_time_index FLOAT,
+                                                            pollution_index FLOAT,
+                                                            climate_index VARCHAR(255),
                                                             FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                             )
                                 '''
         insert_into_query = '''
                                 INSERT INTO quality_life (  country_id, 
                                                             year, 
-                                                            quality_life_id, 
-                                                            purchase_power_id, 
-                                                            safety_id,
-                                                            health_care_id, 
-                                                            cost_living_id, 
-                                                            property_price_to_income_id,
-                                                            traffic_commute_time_id, 
-                                                            pollution_id, 
-                                                            climate_id)
+                                                            quality_life_index, 
+                                                            purchase_power_index, 
+                                                            safety_index,
+                                                            health_care_index, 
+                                                            cost_living_index, 
+                                                            property_price_to_income_index,
+                                                            traffic_commute_time_index, 
+                                                            pollution_index, 
+                                                            climate_index)
                                                             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                             '''
         self._create_table(subject, year, create_table_query, insert_into_query)
@@ -188,8 +259,8 @@ class DBManager:
                                                         id INT PRIMARY KEY AUTO_INCREMENT,
                                                         country_id INT,
                                                         year INT,
-                                                        pollution_id INT,
-                                                        exp_pollution_id INT,
+                                                        pollution_index INT,
+                                                        exp_pollution_index INT,
                                                         FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                         )
                             '''
@@ -197,8 +268,8 @@ class DBManager:
                                 INSERT INTO pollution (
                                                         country_id, 
                                                         year, 
-                                                        pollution_id, 
-                                                        exp_pollution_id
+                                                        pollution_index, 
+                                                        exp_pollution_index
                                                         ) 
                                                         VALUES (%s ,%s, %s, %s)
                             '''
@@ -211,8 +282,8 @@ class DBManager:
                                                             id INT PRIMARY KEY AUTO_INCREMENT,
                                                             country_id INT,
                                                             year INT,
-                                                            health_care_id FLOAT,
-                                                            health_care_exp_id FLOAT,
+                                                            health_care_index FLOAT,
+                                                            health_care_exp_index FLOAT,
                                                             FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                             )
                             '''
@@ -220,8 +291,8 @@ class DBManager:
                                     INSERT INTO health_care (
                                                             country_id, 
                                                             year,
-                                                            health_care_id, 
-                                                            health_care_exp_id
+                                                            health_care_index, 
+                                                            health_care_exp_index
                                                             ) 
                                                             VALUES (%s,%s, %s, %s)
                             '''
@@ -234,11 +305,11 @@ class DBManager:
                                                         id INT PRIMARY KEY AUTO_INCREMENT,
                                                         country_id INT,
                                                         year INT,
-                                                        traffic_id FLOAT,
-                                                        time_id FLOAT,
-                                                        time_exp_id FLOAT,
-                                                        inefficiency_id FLOAT,
-                                                        CO2_emission_id FLOAT,
+                                                        traffic_index FLOAT,
+                                                        time_index FLOAT,
+                                                        time_exp_index FLOAT,
+                                                        inefficiency_index FLOAT,
+                                                        CO2_emission_index FLOAT,
                                                         FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                     )
                             '''
@@ -246,11 +317,11 @@ class DBManager:
                                 INSERT INTO traffic (
                                                     country_id, 
                                                     year, 
-                                                    traffic_id, 
-                                                    time_id, 
-                                                    time_exp_id, 
-                                                    inefficiency_id,
-                                                    CO2_emission_id
+                                                    traffic_index, 
+                                                    time_index, 
+                                                    time_exp_index, 
+                                                    inefficiency_index,
+                                                    CO2_emission_index
                                                     )
                                                     VALUES (%s, %s, %s, %s, %s, %s, %s)
                             '''

@@ -3,7 +3,7 @@ import config
 import argparse
 import welfare_html_parser
 import DB_manager
-import multiprocessing as mp
+from health_api_data_manager import HealthAPIDataManager
 
 countries = []
 
@@ -31,7 +31,7 @@ def log_ranking(subject, year):
 
 def log_all_rankings():
     for subject in config.WelfareType:
-        for year in range(config.FIRST_YEAR, config.CURRENT_YEAR):
+        for year in range(config.FIRST_YEAR, config.LAST_YEAR + 1):
             # We don't want current_year outputted to the user because the data of the current year isn't full
             log_ranking(subject.value, str(year))
     for index, country_data in enumerate(set(countries)):
@@ -52,7 +52,7 @@ def print_tables_of_user_input():
         while args.table:
             try:
                 assert args.table[0] in [welfare.value for welfare in config.WelfareType]
-                assert args.table[1] in [str(year) for year in range(config.FIRST_YEAR, config.CURRENT_YEAR)]
+                assert args.table[1] in [str(year) for year in range(config.FIRST_YEAR, config.LAST_YEAR + 1)]
             except (AssertionError, Exception) as e:
                 log_exception_and_quit(e)
             else:
@@ -72,9 +72,13 @@ def store_data_in_DB():
 
 
 def main():
+    start_time = config.time.time()
     config.setup()
-    print_tables_of_user_input()
+    # print_tables_of_user_input()
+    HealthAPIDataManager.get_data()
     store_data_in_DB()
+    end_time = config.time.time()
+    print(f'Seconds taken: {end_time - start_time}')
 
 
 if __name__ == '__main__':

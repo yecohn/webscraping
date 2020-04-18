@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-import requests
 import config
 
 
@@ -20,7 +19,7 @@ class WelfareHTMLLoader:
     def _fetch_text_from_url(self):
         config.logger.info(f'Started fetching data from {self.url}')
         try:
-            response = requests.get(self.url)
+            response = config.requests.get(self.url)
         except (TypeError, ConnectionError, Exception) as e:
             config.logger.critical(e, exc_info=True)
             config.exit_program()
