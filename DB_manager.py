@@ -22,8 +22,7 @@ class DBManager:
         welfare_types = [welfare_type.value.replace('-', '_') for welfare_type in config.WelfareType]
         for year in years:
             for welfare_type in welfare_types:
-                pass
-                # eval(f'self._create_table_{welfare_type}({year})')
+                eval(f'self._create_table_{welfare_type}({year})')
         for health_indicator in config.HealthIndicator:
             eval(f'self._create_table_health_{health_indicator.name}()')
         config.logger.info(f'Finished setting up DB "{config.DATABASE_NAME}"')
