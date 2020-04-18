@@ -82,12 +82,11 @@ class DBManager:
         desc = config.countries_health_data[health_indicator][0]
         for row in config.countries_health_data[health_indicator][1]:
             country_code = row['SpatialDim']
-            if country_code not in config.countries_codes:
-                pass
-            # country_id = config.countries_codes[country_code]
-            country_id = 'AAA'
+            country_id = config.get_country_id_by_country_code(country_code)
+            if country_id is None:
+                continue
             year = row['TimeDim']
-            value = row['Value']
+            value = row['NumericValue']
             fields = (country_id, year, value, desc)
             if fields is None:
                 continue

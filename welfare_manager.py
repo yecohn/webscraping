@@ -74,7 +74,7 @@ def store_data_in_DB():
 def main():
     start_time = config.time.time()
     config.setup()
-    # print_tables_of_user_input()
+    print_tables_of_user_input()
     HealthAPIDataManager.get_data()
     store_data_in_DB()
     end_time = config.time.time()
