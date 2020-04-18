@@ -6,7 +6,7 @@ PASSWD= 'azerty051210'
 
 
 
-cc3_cn = {  # cc3_cn - Three Letter ISO Country Code to Country Name
+3l_dic = {  # cc3_cn - Three Letter ISO Country Code to Country Name
     'AFG': 'Afghanistan',
     'ALA': 'Aland Islands',
     'ALB': 'Albania',
