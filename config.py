@@ -63,8 +63,8 @@ INVALID_PARAMS = 'You have entered invalid parameters\n' + HELP_DESC
 # MySQL
 DATABASE_NAME = 'welfare'
 HOST = 'localhost'
-USERNAME = 'root'
-PASSWORD = 'azerty051210'
+USERNAME = 'project'
+PASSWORD = 'Azerty051210#!'
 
 
 def exit_program():
