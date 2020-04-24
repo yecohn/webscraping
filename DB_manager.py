@@ -27,6 +27,12 @@ class DBManager:
             eval(f'self._create_table_health_{health_indicator.name}()')
         config.logger.info(f'Finished setting up DB "{config.DATABASE_NAME}"')
 
+    def connect_to_DB(self):
+        self.cur.execute(f'DROP DATABASE IF EXISTS {config.DATABASE_NAME}')
+        self.cur.execute(f'CREATE DATABASE IF NOT EXISTS {config.DATABASE_NAME}')
+        self.cur.execute(f'USE {config.DATABASE_NAME}')
+        config.logger.info(f'Finished connecting to DB "{config.DATABASE_NAME}"')
+
     def _create_table_health_road_death_rate(self):
         table_name = config.HealthIndicator.road_death_rate.name
         create_table_query = f'''
@@ -93,12 +99,6 @@ class DBManager:
             self.welfare_db.commit()
         config.logger.info(f'Created table "{health_indicator}"')
 
-    def connect_to_DB(self):
-        self.cur.execute(f'DROP DATABASE IF EXISTS {config.DATABASE_NAME}')
-        self.cur.execute(f'CREATE DATABASE IF NOT EXISTS {config.DATABASE_NAME}')
-        self.cur.execute(f'USE {config.DATABASE_NAME}')
-        config.logger.info(f'Finished connecting to DB "{config.DATABASE_NAME}"')
-
     def close_DB(self):
         self.welfare_db.close()
 
@@ -130,9 +130,9 @@ class DBManager:
         config.logger.info('Created table "countries"')
 
     def _create_table_property_investment(self, year):
-        subject = config.WelfareType.property_investment.value
-        create_table_query = '''
-                                CREATE TABLE IF NOT EXISTS property_investment(
+        subject = config.WelfareType.property_investment.value.replace('-', '_')
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {subject} (
                                                             id INT PRIMARY KEY AUTO_INCREMENT,
                                                             country_id INT,
                                                             year INT,
@@ -146,8 +146,8 @@ class DBManager:
                                                             FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                             )
                                 '''
-        insert_into_query = '''
-                                INSERT INTO property_investment (
+        insert_into_query = f'''
+                                INSERT INTO {subject} (
                                                             country_id, 
                                                             year, 
                                                             price_to_income, 
@@ -163,9 +163,9 @@ class DBManager:
         self._create_table(subject, year, create_table_query, insert_into_query)
 
     def _create_table_cost_of_living(self, year):
-        subject = config.WelfareType.cost_of_living.value
-        create_table_query = '''
-                                CREATE TABLE IF NOT EXISTS cost_of_living(
+        subject = config.WelfareType.cost_of_living.value.replace('-', '_')
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {subject} (
                                                         id INT PRIMARY KEY AUTO_INCREMENT,
                                                         country_id INT,
                                                         year INT,
@@ -178,8 +178,8 @@ class DBManager:
                                                         FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                         )
                                 '''
-        insert_into_query = '''
-                                INSERT INTO cost_of_living (
+        insert_into_query = f'''
+                                INSERT INTO {subject} (
                                                             country_id,
                                                             year,
                                                             cost_of_living,
@@ -194,9 +194,9 @@ class DBManager:
         self._create_table(subject, year, create_table_query, insert_into_query)
 
     def _create_table_crime(self, year):
-        subject = config.WelfareType.crime.value
-        create_table_query = '''
-                                CREATE TABLE IF NOT EXISTS crime(
+        subject = config.WelfareType.crime.value.replace('-', '_')
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {subject} (
                                                     id INT PRIMARY KEY AUTO_INCREMENT,
                                                     country_id INT,
                                                     year INT,
@@ -205,8 +205,8 @@ class DBManager:
                                                     FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                     )
                                 '''
-        insert_into_query = '''
-                                INSERT INTO crime (  
+        insert_into_query = f'''
+                                INSERT INTO {subject} (  
                                                     country_id, 
                                                     year, 
                                                     crime_index, 
@@ -216,9 +216,9 @@ class DBManager:
         self._create_table(subject, year, create_table_query, insert_into_query)
 
     def _create_table_quality_of_life(self, year):
-        subject = config.WelfareType.quality_of_life.value
-        create_table_query = '''
-                                CREATE TABLE IF NOT EXISTS quality_life(
+        subject = config.WelfareType.quality_of_life.value.replace('-', '_')
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {subject} (
                                                             id  INT PRIMARY KEY AUTO_INCREMENT,
                                                             country_id INT,
                                                             year INT,
@@ -234,8 +234,8 @@ class DBManager:
                                                             FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                             )
                                 '''
-        insert_into_query = '''
-                                INSERT INTO quality_life (  country_id, 
+        insert_into_query = f'''
+                                INSERT INTO {subject} (  country_id, 
                                                             year, 
                                                             quality_life_index, 
                                                             purchase_power_index, 
@@ -251,9 +251,9 @@ class DBManager:
         self._create_table(subject, year, create_table_query, insert_into_query)
 
     def _create_table_pollution(self, year):
-        subject = config.WelfareType.pollution.value
-        create_table_query = '''
-                                CREATE TABLE IF NOT EXISTS pollution(
+        subject = config.WelfareType.pollution.value.replace('-', '_')
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {subject} (
                                                         id INT PRIMARY KEY AUTO_INCREMENT,
                                                         country_id INT,
                                                         year INT,
@@ -262,8 +262,8 @@ class DBManager:
                                                         FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                         )
                             '''
-        insert_into_query = '''
-                                INSERT INTO pollution (
+        insert_into_query = f'''
+                                INSERT INTO {subject} (
                                                         country_id, 
                                                         year, 
                                                         pollution_index, 
@@ -274,9 +274,9 @@ class DBManager:
         self._create_table(subject, year, create_table_query, insert_into_query)
 
     def _create_table_health_care(self, year):
-        subject = config.WelfareType.health_care.value
-        create_table_query = '''
-                                CREATE TABLE IF NOT EXISTS health_care(
+        subject = config.WelfareType.health_care.value.replace('-', '_')
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {subject} (
                                                             id INT PRIMARY KEY AUTO_INCREMENT,
                                                             country_id INT,
                                                             year INT,
@@ -285,8 +285,8 @@ class DBManager:
                                                             FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                             )
                             '''
-        insert_into_query = '''
-                                    INSERT INTO health_care (
+        insert_into_query = f'''
+                                    INSERT INTO {subject} (
                                                             country_id, 
                                                             year,
                                                             health_care_index, 
@@ -297,9 +297,9 @@ class DBManager:
         self._create_table(subject, year, create_table_query, insert_into_query)
 
     def _create_table_traffic(self, year):
-        subject = config.WelfareType.traffic.value
-        create_table_query = '''
-                                CREATE TABLE IF NOT EXISTS traffic(
+        subject = config.WelfareType.traffic.value.replace('-', '_')
+        create_table_query = f'''
+                                CREATE TABLE IF NOT EXISTS {subject} (
                                                         id INT PRIMARY KEY AUTO_INCREMENT,
                                                         country_id INT,
                                                         year INT,
@@ -311,8 +311,8 @@ class DBManager:
                                                         FOREIGN KEY (country_id) REFERENCES countries(country_id)
                                                     )
                             '''
-        insert_into_query = '''
-                                INSERT INTO traffic (
+        insert_into_query = f'''
+                                INSERT INTO {subject} (
                                                     country_id, 
                                                     year, 
                                                     traffic_index, 

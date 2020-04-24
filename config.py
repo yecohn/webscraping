@@ -34,8 +34,8 @@ class WelfareType(enum.Enum):
 LOGGER_NAME = 'welfare_logger'
 logger = logging.getLogger(LOGGER_NAME)
 
-FIRST_YEAR = 2019
-LAST_YEAR = 2019
+FIRST_YEAR = 2013
+LAST_YEAR = 2017
 
 # Logger
 LOG_FILE_NAME = 'welfare_log_file.log'
