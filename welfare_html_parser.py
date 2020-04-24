@@ -3,7 +3,6 @@ import config
 
 
 class WelfareHTMLLoader:
-
     def __init__(self, subject, year):
         self.url = config.MAIN_URL.replace(config.SUBJECT, subject).replace(config.YEAR, year)
         self.subject = subject
@@ -14,7 +13,6 @@ class WelfareHTMLLoader:
     def get_data(self):
         self.response_text = self._fetch_text_from_url()
         self.response_soup = self._parse_response()
-        return self.response_soup
 
     def _fetch_text_from_url(self):
         config.logger.info(f'Started fetching data from {self.url}')

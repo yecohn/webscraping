@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 import config
 import argparse
 import welfare_html_parser
@@ -32,7 +31,6 @@ def log_ranking(subject, year):
 def log_all_rankings():
     for subject in config.WelfareType:
         for year in range(config.FIRST_YEAR, config.LAST_YEAR + 1):
-            # We don't want current_year outputted to the user because the data of the current year isn't full
             log_ranking(subject.value, str(year))
     for index, country_data in enumerate(set(countries)):
         config.countries_dict[country_data] = index + 1
@@ -55,7 +53,6 @@ def print_tables_of_user_input():
                 assert args.table[1] in [str(year) for year in range(config.FIRST_YEAR, config.LAST_YEAR + 1)]
             except (AssertionError, Exception) as e:
                 log_exception_and_quit(e)
-            else:
                 print('\n\n\n')
                 log_ranking(args.table[0], args.table[1])
                 print('\n\n\n')
