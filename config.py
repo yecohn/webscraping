@@ -64,7 +64,7 @@ INVALID_PARAMS = 'You have entered invalid parameters\n' + HELP_DESC
 DATABASE_NAME = 'welfare'
 HOST = 'localhost'
 USERNAME = 'root'
-PASSWORD = 'Yc7350328'
+PASSWORD = 'azerty051210'
 
 
 def exit_program():
