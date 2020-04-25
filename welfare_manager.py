@@ -22,7 +22,8 @@ def log_ranking(subject, year):
     countries_with_data = parser.get_countries_with_headline()
     if len(countries_with_data) > 1:
         countries.extend(list(zip(*countries_with_data[1:]))[0])
-    config.countries_data[f'{subject}_{year}'] = countries_with_data
+    subject_corrected = subject.replace('-', '_')
+    config.countries_data[f'{subject_corrected}_{year}'] = countries_with_data
     # We want one line to appear in the log file but a pretty print for the user
     config.logger.info(config.countries_data)
     config.pprint.pprint(config.countries_data)
