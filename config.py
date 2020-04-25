@@ -6,10 +6,10 @@ import logging
 import enum
 import sys
 import collections
+import pprint
 import requests
 import time
 import datetime
-import pprint
 
 countries_dict = {}
 countries_data = collections.defaultdict(list)
